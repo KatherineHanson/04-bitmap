@@ -32,8 +32,8 @@ fs.readFile('./__test__/asset/house.bmp', (err, data) => {
   // console.log('vertical resolution: ', data.readUInt32LE(42))
   // console.log('number of colors in the color palette: ', data.readUInt32LE(46))
   // console.log('number of important colors used: ', data.readUInt32LE(50))
-  //
-  // let color_table = data.slice(41, 1065)
+
+  let color_table = data.slice(41, 1065);
   for (let i = 0; i < color_table.length; i++) {
     //color_table[i] = -255;
     color_table[i] = 255 - color_table[i];
