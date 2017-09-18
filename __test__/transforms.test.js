@@ -4,8 +4,14 @@ const transform = require('../lib/transforms.js');
 const buffer = require('../lib/buffer.js');
 
 const fs = require('fs');
-const bitmap_original = fs.readFileSync(__dirname + '/bitmap.bmp');
-const bitmap_whiteout = fs.readFileSync(__dirname + '/bitmap.bmp');
+const bitmap_original = fs.readFileSync(__dirname + '/asset/bitmap.bmp');
+const bitmap_whiteout = fs.readFileSync(__dirname + '/asset/bitmap.bmp');
+// const bitmap_original = fs.readdirSync(__dirname + '/asset/bitmap.bmp');
+// const bitmap_whiteout = fs.readdirSync(__dirname + '/asset/bitmap.bmp');
+// const bitmap_original = fs.read(__dirname + '/asset/bitmap.bmp');
+// const bitmap_whiteout = fs.read(__dirname + '/asset/bitmap.bmp');
+// const bitmap_original = fs.readFileSync(__dirname + '/asset/bitmap.bmp');
+// const bitmap_whiteout = fs.readFileSync(__dirname + '/asset/bitmap.bmp');
 // console.log(fs.readFileSync('./asset/bitmap.bmp'));
 // console.log('test', fs.readFileSync('./asset/bitmap.bmp'));
 // const bitmap_blackout = fs.readFile('./asset/whiteout_bitmap.bmp');
@@ -26,7 +32,7 @@ describe('transform', () => {
     // run my code
     transform.whiteout(buffer.buffer);
 
-    // validate my stuff
+    // validate my stuff by comparing transformed buffer to test buffer
     // for (something) {
     expect(buffer.buffer).toEqual(bitmap_whiteout);
     // }
