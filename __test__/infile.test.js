@@ -1,12 +1,12 @@
 'use strict';
-const reader= require('../index.js');
+// const reader= require('../index.js');
 const transforms = require('../lib/transforms.js');
 const parse = require('../lib/outfile.js');
-
+const fs = require('fs');
 
 describe('Buffer', () => {
   test('buffer should return an object with correct data for house.bmp.', (done) => {
-    reader(`${__dirname}/../asset/house.bmp`, (err, data) => {
+    fs.readfile(`${__dirname}/../asset/house.bmp`, (err, data) => {
       let parsedData = parse(data);
       let result = new transforms(parsedData);
       expect(err).toBeNull();
