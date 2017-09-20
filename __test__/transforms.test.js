@@ -1,5 +1,5 @@
 'use strict'
-
+/*
 const fs = require('fs')
 
 const transforms = require('../lib/transforms.js');
@@ -17,3 +17,4 @@ describe('transform', () => {
     });
   });
 });
+*/

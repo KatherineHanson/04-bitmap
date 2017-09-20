@@ -1,5 +1,5 @@
 'use strict'
-
+/*
 const infile = require('../lib/infile.js')
 
 describe('infile', () => {
@@ -19,3 +19,4 @@ describe('infile', () => {
     })
   })
 })
+*/

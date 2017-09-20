@@ -1,5 +1,0 @@
-(err, data) => {
-      expect(err).toBeNull();
-      //expect.stringContaining('The file has been saved!')
-      done();
-    }
